@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Laravel template
+/vendor/
+.idea
+composer.lock
+
+
