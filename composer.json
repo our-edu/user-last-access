@@ -1,5 +1,5 @@
 {
-    "name": "uredu/laravel-user-last-access",
+    "name": "ouredu/laravel-user-last-access",
     "description": "A Laravel package to store the latest user access timestamp without using middleware or login events.",
     "type": "library",
     "license": "MIT",
@@ -14,12 +14,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Uredu\\LastAccess\\": "src/"
+            "Ouredu\\LastAccess\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Uredu\\LastAccess\\Tests\\": "tests/"
+            "Ouredu\\LastAccess\\Tests\\": "tests/"
         }
     },
     "extra": {

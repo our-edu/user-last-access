@@ -1,11 +1,10 @@
 <?php
-namespace Ouredu\LaravelUserLastAccess\Listeners;
+namespace Ouredu\LastAccess\Listeners;
 
 use Carbon\Carbon;
-use Illuminate\Auth\Events\Login;
-use Illuminate\Support\Facades\DB;
-use LastLoginTracker\Listeners\Log;
-use function Sodium\crypto_auth;
+use Illuminate\Support\Facades\Log;
+use Ouredu\LastAccess\Models\UserLastAccess;
+
 
 class UserLastAccessListener
 {
@@ -14,7 +13,7 @@ class UserLastAccessListener
 
         try {
             $user = auth()->user();
-           U->updateOrInsert(
+           UserLastAccess::updateOrCreate(
                 ['user_uuid' => $user->uuid],
                 ['last_login_at' => Carbon::now(), 'updated_at' => Carbon::now()]
             );

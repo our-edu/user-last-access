@@ -1,9 +1,9 @@
 <?php
 
-namespace Ouredu\LaravelUserLastAccess;
+namespace Ouredu\LastAccess;
 
 use Illuminate\Support\ServiceProvider;
-use Ouredu\LaravelUserLastAccess\Listeners\UserLastAccessListener;
+use Ouredu\LastAccess\Listeners\UserLastAccessListener;
 use Illuminate\Routing\Events\RouteMatched;
 use function LastLoginTracker\database_path;
 
