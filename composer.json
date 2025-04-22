@@ -1,0 +1,34 @@
+{
+    "name": "uredu/laravel-user-last-access",
+    "description": "A Laravel package to store the latest user access timestamp without using middleware or login events.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yasmin mostafa"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Uredu\\LastAccess\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Uredu\\LastAccess\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Uredu\\LastAccess\\LastAccessServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
