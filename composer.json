@@ -14,18 +14,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Ouredu\\LastAccess\\": "src/"
+            "Ouredu\\UserLastAccess\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ouredu\\LastAccess\\Tests\\": "tests/"
+            "Ouredu\\UserLastAccess\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Ouredu\\LastAccess\\LastAccessServiceProvider"
+                "Ouredu\\UserLastAccess\\LastAccessServiceProvider"
             ]
         }
     },

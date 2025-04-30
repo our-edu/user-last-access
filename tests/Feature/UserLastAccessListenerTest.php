@@ -1,14 +1,14 @@
 <?php
 
-namespace Ouredu\LastAccess\Tests\Feature;
+namespace Ouredu\UserLastAccess\Tests\Feature;
 
 use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Support\Facades\Event;
-use Ouredu\LastAccess\Listeners\UserLastAccessListener;
-use Ouredu\LastAccess\Tests\TestCase;
-use Ouredu\LastAccess\Models\UserLastAccess;
+use Ouredu\UserLastAccess\Listeners\UserLastAccessListener;
+use Ouredu\UserLastAccess\Tests\TestCase;
+use Ouredu\UserLastAccess\Models\UserLastAccess;
 use Illuminate\Support\Facades\Schema;
 
 class UserLastAccessListenerTest extends TestCase

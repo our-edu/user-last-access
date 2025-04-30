@@ -1,9 +1,9 @@
 <?php
-namespace Ouredu\LastAccess\Listeners;
+namespace Ouredu\UserLastAccess\Listeners;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
-use Ouredu\LastAccess\Models\UserLastAccess;
+use Ouredu\UserLastAccess\Models\UserLastAccess;
 
 
 class UserLastAccessListener

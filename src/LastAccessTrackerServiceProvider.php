@@ -1,11 +1,10 @@
 <?php
 
-namespace Ouredu\LastAccess;
+namespace Ouredu\UserLastAccess;
 
 use Illuminate\Support\ServiceProvider;
-use Ouredu\LastAccess\Listeners\UserLastAccessListener;
+use Ouredu\UserLastAccess\Listeners\UserLastAccessListener;
 use Illuminate\Routing\Events\RouteMatched;
-use function LastLoginTracker\database_path;
 
 class LastAccessTrackerServiceProvider extends ServiceProvider
 {

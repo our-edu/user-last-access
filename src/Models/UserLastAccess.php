@@ -1,6 +1,6 @@
 <?php
 
-namespace Ouredu\LastAccess\Models;
+namespace Ouredu\UserLastAccess\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

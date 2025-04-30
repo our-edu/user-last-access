@@ -1,9 +1,9 @@
 <?php
 
-namespace Ouredu\LastAccess\Tests;
+namespace Ouredu\UserLastAccess\Tests;
 
 use Orchestra\Testbench\TestCase as BaseTestCase;
-use Ouredu\LastAccess\LastAccessTrackerServiceProvider;
+use Ouredu\UserLastAccess\LastAccessTrackerServiceProvider;
 
 abstract class TestCase extends BaseTestCase
 {
