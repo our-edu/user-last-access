@@ -29,12 +29,13 @@
             ]
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/our-edu/user-last-access"
+    "repositories": {
+        "our-edu/user-last-access": {
+            "type": "git",
+            "url": "https://github.com/our-edu/user-last-access",
+            "reference": "dev-main"
         }
-    ],
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }

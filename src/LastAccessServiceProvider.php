@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Ouredu\UserLastAccess\Listeners\UserLastAccessListener;
 use Illuminate\Routing\Events\RouteMatched;
 
-class LastAccessTrackerServiceProvider extends ServiceProvider
+class LastAccessServiceProvider extends ServiceProvider
 {
     public function boot()
     {

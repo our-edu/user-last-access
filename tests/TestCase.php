@@ -3,14 +3,14 @@
 namespace Ouredu\UserLastAccess\Tests;
 
 use Orchestra\Testbench\TestCase as BaseTestCase;
-use Ouredu\UserLastAccess\LastAccessTrackerServiceProvider;
+use Ouredu\UserLastAccess\LastAccessServiceProvider;
 
 abstract class TestCase extends BaseTestCase
 {
     protected function getPackageProviders($app)
     {
         return [
-            LastAccessTrackerServiceProvider::class,
+            LastAccessServiceProvider::class,
         ];
     }
 
