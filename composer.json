@@ -29,6 +29,12 @@
             ]
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/our-edu/user-last-access"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }
