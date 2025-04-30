@@ -25,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Uredu\\LastAccess\\LastAccessServiceProvider"
+                "Ouredu\\LastAccess\\LastAccessServiceProvider"
             ]
         }
     },
