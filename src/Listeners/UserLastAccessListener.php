@@ -13,14 +13,21 @@ class UserLastAccessListener
 
         try {
             $user = auth()->user();
-           UserLastAccess::updateOrCreate(
+
+            // Check if the user is authenticated
+            if (!$user) {
+                Log::warning('No authenticated user found.');
+                return;
+            }
+
+            UserLastAccess::updateOrCreate(
                 ['user_uuid' => $user->uuid],
                 ['last_login_at' => Carbon::now(), 'updated_at' => Carbon::now()]
             );
 
-        }catch (\Exception $exception){
+        } catch (\Exception $exception) {
             // Log error to the default log channel
-            Log::error('can not send log to logging', [
+            Log::error('Cannot update user last access log', [
                 'message' => $exception->getMessage(),
                 'file' => $exception->getFile(),
                 'line' => $exception->getLine(),
