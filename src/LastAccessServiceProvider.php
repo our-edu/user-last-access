@@ -16,7 +16,10 @@ class LastAccessServiceProvider extends ServiceProvider
 
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
 
-        $this->app['events']->listen(RouteMatched::class, UserLastAccessListener::class);
+        $this->app['events']->listen(RouteMatched::class, function (RouteMatched $event) {
+            $listener = new UserLastAccessListener();
+            $listener->handle();
+        });
     }
 
     public function register()

@@ -19,7 +19,8 @@ class UserLastAccessListener
             );
 
         }catch (\Exception $exception){
-            Log::channel->error('can not send log to logging', [
+            // Log error to the default log channel
+            Log::error('can not send log to logging', [
                 'message' => $exception->getMessage(),
                 'file' => $exception->getFile(),
                 'line' => $exception->getLine(),
