@@ -10,11 +10,12 @@ class LastAccessServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        // Update paths to point to the correct location of the migrations folder
         $this->publishes([
-            __DIR__.'/database/migrations/' => database_path('migrations'),
+            __DIR__.'/../database/migrations/' => database_path('migrations'),
         ], 'migrations');
 
-        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
         $this->app['events']->listen(RouteMatched::class, function (RouteMatched $event) {
             $listener = new UserLastAccessListener();
