@@ -19,8 +19,9 @@ class UserLastAccessListenerTest extends TestCase
     {
         parent::setUp();
         // Ensure the UserLastAccess table exists
-        $this->loadMigrationsFrom(__DIR__.'/../../src/database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
     }
+
 
     public function test_user_last_access_record_is_created_or_updated()
     {
@@ -31,7 +32,7 @@ class UserLastAccessListenerTest extends TestCase
         $this->be($user);
 
         // Fire the event
-        event(new RouteMatched(request(), app()->router->getRoutes()->getByName('api')));
+        Event::dispatch(new RouteMatched(request(), app()->router->getRoutes()->getByName('api')));
 
         // Assert the last access was stored
         $this->assertDatabaseHas('user_last_accesses', [
@@ -42,4 +43,5 @@ class UserLastAccessListenerTest extends TestCase
         $this->assertNotNull($lastAccess);
         $this->assertTrue(Carbon::parse($lastAccess->last_login_at)->isToday());
     }
+
 }
